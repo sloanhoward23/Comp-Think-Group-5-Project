@@ -15,6 +15,20 @@ def dealahand(deck):
         hand.append(card)
     return hand
     
+def restart():
+    reset = input("Again? (y/n): ")
+    if reset == "y":
+        dealerhand = []
+        playerhand = []
+        deck = [2,3,4,5,6,7,8,9,10,11,12,13,14]*4
+        game()
+    else:
+        print("Goodbye")
+        exit()
+
+dealerhand = dealahand(deck)
+playerhand = dealahand(deck)
+    
 def sumcard(hand):
     sumcard = 0
     for card in hand:
@@ -43,35 +57,6 @@ def card2(hand):
         random.randint(1,11)
         print(random.randint(1,11)) 
     print(random.choice(hand)) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def score(dealerhand, playerhand):
