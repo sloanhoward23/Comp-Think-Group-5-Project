@@ -43,3 +43,53 @@ def card2(hand):
         random.randint(1,11)
         print(random.randint(1,11)) 
     print(random.choice(hand)) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def score(dealerhand, playerhand):
+if sumcard(playerhand) == 21:
+		print_results(dealerhand, playerhand)
+print "Congratulations! You got a Blackjack!\n"
+elif sumcard(dealerhand) == 21:
+		print_results(dealerhand, playerhand)		
+print "Sorry, you lose. The dealer got a blackjack.\n"
+elif sumcard(playerhand) > 21:
+		print_results(dealerhand, playerhand)
+print "Sorry. You busted. You lose.\n"
+elif sumcard(dealerhand) > 21:
+		print_results(dealerhand, playerhand)			   
+print "Dealer busts. You win!\n"
+elif sumcard(playerhand) < sumcard(dealerhand):
+		print_results(dealerhand, playerhand)
+print "Sorry. Your score isn't higher than the dealer. You lose.\n"
+elif sumcard(playerhand) > sumcard(dealerhand):
+		print_results(dealerhand, playerhand)			   
+print "Congratulations. Your score is higher than the dealer. You win\n"
