@@ -14,3 +14,32 @@ def dealahand(deck):
         if card == 14:card = "A"
         hand.append(card)
     return hand
+    
+def sumcard(hand):
+    sumcard = 0
+    for card in hand:
+        if card == "J" or card == "Q" or card == "K":
+            sumcard+= 10 
+        elif card == "A":
+            if sumcard >= 11: sumcard+=1
+        else : sumcard+= 1
+    else: sumcard += card
+    return sumcard
+print (sumcard)
+        
+def card1(hand):
+    random.choice(hand)
+    print ("cardchoice1")
+    if random.choice(hand) == "A" or 14:
+        random.randint(1,11)
+        print(random.randint(1,11)) 
+    else:
+        print (random.choice(hand)) 
+        
+def card2(hand):
+    random.choice(hand) 
+    print ("cardchoice2")
+    if random.choice(hand) == "A" or 14:
+        random.randint(1,11)
+        print(random.randint(1,11)) 
+    print(random.choice(hand)) 
